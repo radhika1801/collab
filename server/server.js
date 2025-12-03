@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // Update this to your gh-pages URL when deploying
+        origin: "https://radhika1801.github.io/collab/", // Update this to your gh-pages URL when deploying
         methods: ["GET", "POST"]
     }
 });
