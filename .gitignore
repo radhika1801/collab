@@ -1,14 +1,15 @@
-# Ignore node_modules folders specifically in client and server
-# This keeps the repo from tracking dependencies in those sub-projects.
-
-# Ignore all node_modules directories inside client and server (including nested)
+# Ignore node_modules in both client and server
 /client/**/node_modules/
 /client/node_modules/
 /server/**/node_modules/
 /server/node_modules/
 
-# Also ignore accidental singular folder name if it exists
-/client/**/node_module/
-/server/**/node_module/
+# OS files
+.DS_Store
 
-# You can still use individual .gitignore files inside subfolders for more rules.
+# Environment variables
+.env
+
+# Build outputs
+/client/dist/
+/client/dist-ssr/

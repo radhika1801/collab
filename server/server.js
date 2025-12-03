@@ -6,20 +6,20 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*",
+        origin: "http://localhost:5173", // Update this to your gh-pages URL when deploying
         methods: ["GET", "POST"]
     }
 });
 
-//app.use(express.static("public"));
-
 io.on("connection", (socket) => {
     console.log("User connected:", socket.id);
 
+    // Handle draw events
     socket.on("draw", (data) => {
         socket.broadcast.emit("draw", data);
     });
 
+    // Handle clear events
     socket.on("clear", () => {
         socket.broadcast.emit("clear");
     });
