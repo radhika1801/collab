@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import './App.css';
 
 // Socket connection - Change to your Render URL when deploying
-const socket = io("http://localhost:3000", {
+const socket = io("https://collab-wox8.onrender.com", {
   transports: ["websocket"],
 });
 
